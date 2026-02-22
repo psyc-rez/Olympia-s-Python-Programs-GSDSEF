@@ -8,8 +8,8 @@ from datetime import datetime, timedelta, timezone
 # ===============================
 # USER CONFIGURATION
 # ===============================
-BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAANr05QEAAAAAZu4s3AiSIGvdKmxWdgdyvosBoDI%3D52zMFMsbFM750MFQRSR4yCjl7FKYaiehILM3df0AQB6N9tQo2F"
-DB_PATH = "C:/Users/olymp_ubwzbys/Documents/tweets.db"
+BEARER_TOKEN = "" 
+DB_PATH = ""
 
 MAX_TWEETS_PER_SLICE = 100      # max tweets saved per term per slice
 DAYS_BACK = [7]                 # list of days back to sample (0=today, 1=yesterday, etc.)
@@ -187,7 +187,7 @@ print("Script start:", script_start.isoformat())
 for semantic_set, hierarchies in SEMANTIC_SETS.items():
     for hierarchy_idx, hierarchy in enumerate(hierarchies):
         for term_idx, term in enumerate(hierarchy):
-            # 🔒 Skip empty placeholders
+            # Skip empty placeholders
             if not term or not term.strip():
                 continue
 
